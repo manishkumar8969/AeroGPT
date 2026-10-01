@@ -33,7 +33,7 @@ function ChatWindow() {
         setUploadedFile(null); // Uploaded cache clear karein
 
         try {
-            const response = await fetch("http://localhost:8080/api/chat", {
+            const response = await fetch("https://aerogpt.onrender.com/api/chat", {
                 method: "POST",
                 body: formData 
             });
