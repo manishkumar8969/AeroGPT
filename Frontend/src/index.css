@@ -1,0 +1,14 @@
+/* Poore app ke liye sleek modern dark scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #212121;
+}
+::-webkit-scrollbar-thumb {
+    background: #424242; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #686868; 
+}

@@ -1,0 +1,85 @@
+.chats {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem 0; /* Left-right padding hatayi taaki content proper break ho */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Poore message containers ko screen ke center me rakhega */
+    background-color: #212121;
+}
+
+/* User aur AI dono ke message block ki main settings */
+.userDiv, .gptDiv {
+    width: 100%;
+    max-width: 720px;       /* ChatGPT ki standard text layout width */
+    padding: 1rem 1.5rem;   /* Safe clean breathing padding */
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* User block settings */
+.userDiv {
+    justify-content: flex-end; /* User bubble ko right me rakhega */
+}
+
+.userMessage {
+    background-color: #2f2f2f; /* Premium dark-grey bubble */
+    color: #ececec;
+    padding: 10px 16px;
+    border-radius: 20px;       /* Smooth pill bubble shape */
+    max-width: 70%;            /* Screen ke bahar na jaye */
+    width: fit-content;
+    word-break: break-word;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* GPT Response Settings (Ekdum Clean Layout) */
+.gptDiv {
+    justify-content: flex-start; /* AI response hamesha baayein se shuru hoga */
+    text-align: left;           /* Text ki alignment ekdum natural left rahegi */
+    color: #ececec;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+/* Markdown aur Code Blocks handling */
+pre {
+    background-color: #0d0d0d;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    width: 100%;
+    white-space: pre-wrap;
+}
+
+.hljs {
+    border-radius: 8px !important;
+}
+
+
+/* Welcome Container ko perfect text-center aur space dene ke liye */
+.welcome-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #212121;
+}
+
+.welcome-container h1 {
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: #ececec;
+    margin: 0;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

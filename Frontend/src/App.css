@@ -1,0 +1,39 @@
+* {
+    color: #ececec;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box; /* Spacing aur layout calculations ko perfect rakhne ke liye */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Screen se extra scrollbars gayab karne ke liye */
+}
+
+.app {
+    background-color: #212121;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Component ka main wrapper settings */
+.app .sidebar {
+    width: 260px; /* Standard ChatGPT sidebar width */
+    height: 100%;
+    transition: margin-left 0.3s ease, visibility 0.3s ease; /* Smooth sliding animation */
+}
+
+/* Jab sidebar hide hoga, toh hum use baayein (left) side screen se bahar slide kar denge */
+.app.sidebar-hidden .sidebar {
+    margin-left: -260px;
+    visibility: hidden; /* Dom elements click control secure karne ke liye */
+}
+
+/* Chat window automatically poori bachi hui space le legi */
+.app .chatWindow {
+    flex: 1;
+    height: 100%;
+    transition: all 0.3s ease;
+}
